@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "abc.csv",
-				"folderPath": "source/level1/level2",
+				"folderPath": "source",
 				"container": "ct1"
 			},
 			"columnDelimiter": ",",
