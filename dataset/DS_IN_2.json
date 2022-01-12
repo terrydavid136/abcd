@@ -1,0 +1,44 @@
+{
+	"name": "DS_IN_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bloblinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"PAR_FILENAME": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().PAR_FILENAME",
+					"type": "Expression"
+				},
+				"folderPath": "source",
+				"container": "ct1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
