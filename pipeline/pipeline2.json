@@ -46,13 +46,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Error_msg",
-					"value": ""
+					"value": [
+						""
+					]
 				}
 			}
 		],
 		"variables": {
 			"Error_msg": {
-				"type": "String"
+				"type": "Array"
 			}
 		},
 		"annotations": []
