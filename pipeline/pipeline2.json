@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "SOURCE_METADAT",
+				"name": "SOURCE_METADATA",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -37,7 +37,7 @@
 				"type": "SetVariable",
 				"dependsOn": [
 					{
-						"activity": "SOURCE_METADAT",
+						"activity": "SOURCE_METADATA",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -46,15 +46,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Error_msg",
-					"value": [
-						""
-					]
+					"value": "@activity(SOURCE_METADATA).output"
 				}
 			}
 		],
 		"variables": {
 			"Error_msg": {
-				"type": "Array"
+				"type": "String"
 			}
 		},
 		"annotations": []
