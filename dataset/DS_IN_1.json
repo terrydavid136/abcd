@@ -10,24 +10,34 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "source",
+				"fileName": "abc.csv",
+				"folderPath": "source/level1/level2",
 				"container": "ct1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
+				"name": "empid",
 				"type": "String"
 			},
 			{
+				"name": "name",
 				"type": "String"
 			},
 			{
+				"name": "salary",
 				"type": "String"
 			},
 			{
+				"name": "dept_id",
+				"type": "String"
+			},
+			{
+				"name": "load_date",
 				"type": "String"
 			}
 		]
