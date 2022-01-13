@@ -20,7 +20,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"structure"
+						"size"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
@@ -33,13 +33,13 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "Setvar1",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
 						"activity": "SOURCE_METADAT",
 						"dependencyConditions": [
-							"Failed"
+							"Succeeded"
 						]
 					}
 				],
