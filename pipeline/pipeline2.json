@@ -20,7 +20,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"size"
+						"columnCount"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
@@ -33,7 +33,7 @@
 				}
 			},
 			{
-				"name": "Setvar1",
+				"name": "Set variable1",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
