@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "processed_data.csv",
-				"folderPath": "target",
+				"fileName": "dataprocessed.csv",
+				"folderPath": "tg",
 				"container": "ct1"
 			},
 			"columnDelimiter": ",",
