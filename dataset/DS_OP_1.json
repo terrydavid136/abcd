@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "processed_data.csv",
 				"folderPath": "target",
 				"container": "ct1"
 			},
