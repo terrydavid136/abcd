@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "DS_DATALAKE_PIPE",
+						"referenceName": "DS_IN_DATALAKE_PIPE",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "DS_OP_DATALAKE_PIPE",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -26,7 +26,7 @@
 					"name": "Filter1"
 				}
 			],
-			"script": "source(output(\n\t\tempid as string,\n\t\tname as string,\n\t\tsalary as string,\n\t\tdept_id as string,\n\t\tload_date as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 filter(empid>'1') ~> Filter1\nFilter1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['abc_processed.csv'],\n\tumask: 0022,\n\tpreCommands: [],\n\tpostCommands: [],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tpartitionBy('hash', 1)) ~> sink1"
+			"script": "source(output(\n\t\tempid as string,\n\t\tname as string,\n\t\tsalary as string,\n\t\tdept_id as string,\n\t\tload_date as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 filter(empid>'1') ~> Filter1\nFilter1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['abc_processed.csv'],\n\tumask: 0022,\n\tpreCommands: [],\n\tpostCommands: [],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\theader: (['empid,name,salary,dept_id,load_date']),\n\tpartitionBy('hash', 1)) ~> sink1"
 		}
 	}
 }

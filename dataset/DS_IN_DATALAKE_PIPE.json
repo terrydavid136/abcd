@@ -1,5 +1,5 @@
 {
-	"name": "DS_DATALAKE_PIPE",
+	"name": "DS_IN_DATALAKE_PIPE",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
